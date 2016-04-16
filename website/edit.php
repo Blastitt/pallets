@@ -9,7 +9,7 @@
 	
 	
 	<div id="wrapper">
-		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
+		<h1><a href="/"><img src="images/pallet_100.png" id="pallet_logo"/></a>Pallet Finder</h1>
 		<p>Find items and pallets around the shipyard</p>
 	
 		<img src="images/app.png" />

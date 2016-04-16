@@ -16,7 +16,7 @@
 <body>
 	
 	<div id="wrapper">
-		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
+		<h1><a href="/"><img src="images/pallet_100.png" id="pallet_logo"/></a>Pallet Finder</h1>
 		<h2>create part</h2>
 	
 		<form action ="api/createpart.php" onsubmit="return validatePart()">

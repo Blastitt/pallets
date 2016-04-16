@@ -50,7 +50,7 @@
 <body>
 	
 	<div id="wrapper">
-		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
+		<h1><a href="/"><img src="images/pallet_100.png" id="pallet_logo"/></a>Pallet Finder</h1>
 		<h2>create pallet</h2>
 		<table>
 			<tr>
@@ -98,7 +98,7 @@
 					Picture 1:
 				</td>
 				<td>
-					<input type="file" id="pic1">
+					<input type="file" id="pic1" accept="image/*">
 				</td>
 			</tr>
 			<tr>
@@ -106,7 +106,7 @@
 					Picture 2:
 				</td>
 				<td>
-					<input type="file" id="pic2">
+					<input type="file" id="pic2" accept="image/*">
 				</td>
 			</tr>
 			<tr>

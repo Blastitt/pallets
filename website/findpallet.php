@@ -52,8 +52,8 @@
 <body>
 	
 	<div id="wrapper">
-		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
-		<p>find pallet</p>
+		<h1><a href="/"><img src="images/pallet_100.png" id="pallet_logo"/></a>Pallet Finder</h1>
+		<p>find pallets by name &amp; id</p>
 		<table>
 			<tr>
 				<td>
