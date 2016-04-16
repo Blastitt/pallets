@@ -32,8 +32,8 @@
 		<!--<img src="images/app.png" /> -->
 		<a href="findpallet.php"><div class="largeButton">&#9733; Find a Pallet</div></a>
 		<a href="createpallet.php">	<div class="largeButton">Create a Pallet</div></a>
-		<a href="edit.php"><div class="largeButton">Edit a Pallet</div></a>
-		<a href="createpart.php"><div class="largeButton">Create a Part</div></a>
+		<a href="editpallet.php"><div class="largeButton">Edit a Pallet</div></a>
+		
 		
 		<!--<input type="text" style="width:100%;font-size:20px"> -->
 	</div>

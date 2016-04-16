@@ -36,13 +36,36 @@ a {
 	background-color:transparent;
 }
 
-#wrapper table{
+#wrapper .blue{
 	color:#074077;
 	border-radius: 25px;
 	border:1px solid #074077;
 	background-color:#edf6fe;
 	padding:20px;
 	margin-bottom:15px;
+}
+
+#wrapper .alternating{
+	color:#074077;
+	border:1px solid #074077;
+	background-color:#edf6fe;
+	padding:20px;
+	margin-bottom:15px;
+	width:100%;
+	border-collapse:collapse;
+}
+
+#wrapper .alternating tr:nth-child(even){
+	background-color:#F4F9FE;
+}
+
+#wrapper .alternating tr:first-child{
+	color:#fff;
+	background-color:#074077
+}
+
+#wrapper td, #wrapper th{
+	padding:5px;
 }
 
 #footer{
@@ -63,4 +86,27 @@ a {
 
 .bad-red{
 	color:red;
+}
+
+.good-message{
+	border:1px solid #4ca64c;
+	border-radius: 15px;
+	color:#4ca64c;
+	background-color:#b2d8b2;
+	padding:20px;
+	font-size:15px;
+	display:none;
+	margin-bottom:20px;
+	
+}
+
+.bad-message{
+	border:1px solid #ff3232;
+	border-radius: 15px;
+	color:#ff3232;;
+	background-color:#ffb2b2;
+	padding:20px;
+	font-size:15px;
+	display:none;
+	margin-bottom:20px;
 }

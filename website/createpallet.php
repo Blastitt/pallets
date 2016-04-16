@@ -21,30 +21,56 @@
 	
 	function submitPallet(){
 		if(!validatePallet()) return;
-		$.post( GLOBAL_API_ENDPOINT + "/store.php", { 
-			pal_name: $("pal_name").val(), 
-			pal_id: $("pal_id").val(),
-			pal_desc: $("pal_desc").val(),
-			long: $("long").val(),
-			lat: $("lat").val(),
-			pic1: "?",
-			pic2: "?",
-			pack_id: $("wp_id").val(),
-			pack_name: $("wp_name").val(),
-			pack_desc: $("wp_desc").val(),
-			pack_date: $("wp_date").val(),
-			project: $("project").val()}, 
-			function( data ) {
-  			alert( "Data Posted: " + data );
-			/* if success, iupload to amazon */
-			var palletID = "???";
-			var pic1file = document.getElementById("#pic1").files[0];
-			var pic2file = document.getElementById("#pic2").files[0];
+		var pic1guid = guid() + ".png";
+		var pic2guid = guid() + ".png";
+		
+		
+	    $.ajax({
+	               url: GLOBAL_API_ENDPOINT + "/store.cgi?",
+	               type: "get",
+	               crossDomain: true,
+	               data: $.param({ 
+			pal_name: $("#pallet_name").val(), 
+			pal_id: $("#pallet_id").val(),
+			pal_desc: $("#pallet_desc").val(),
+			long: $("#long").val(),
+			lat: $("#lat").val(),
+			pic1: "https://s.amazonaws.com/palletpics/"+pic1guid,
+			pic2: "https://s.amazonaws.com/palletpics/"+pic2guid,
+			//pack_id: $("wp_id").val(),
+			//pack_name: $("wp_name").val(),
+			pack_desc: $("#wp_desc").val(),
+			//pack_date: $("wp_date").val(),
+			loc: $("#loc").val()
+			//project: $("project").val()
+		}),
+	               success: function (response) {
+	                   // var resp = JSON.parse(response)
+// 	                   alert(resp.status);
+					   //alert( "Data Posted: " + response );
+		   			/* if success, iupload to amazon */
+					   if(document.getElementById("pic1").files.length > 0){
+		   				   var pic1file = document.getElementById("pic1").files[0];
+   		   				   uploadFile(pic1file, pic1guid);
+					   }
+					   if(document.getElementById("pic2").files > 0){
+	   		   			var pic2file = document.getElementById("pic2").files[0];
+	   		   			uploadFile(pic2file, pic2guid);
+					   }
+		   			
 			
-			uploadFile(pic1file, palletID+"_pic1");
-			uploadFile(pic2file, palletID+"_pic2");
-			
-		});
+		   			$(".good-message").show();
+					   
+	               },
+	               error: function (xhr, status) {
+					   $(".bad-message").show();
+					   
+	                   //alert("error");
+	               }
+	           });
+		
+		
+		
 		
 	}
 	</script>
@@ -54,7 +80,10 @@
 	<div id="wrapper">
 		<h1><a href="/"><img src="images/pallet_100.png" id="pallet_logo"/></a>Pallet Finder</h1>
 		<h2>create pallet</h2>
-		<table>
+		<div class="good-message">pallet saved</div>
+		<div class="bad-message">error</div>
+		
+		<table class="blue">
 			<tr>
 				<td>
 					Pallet Name:
@@ -111,22 +140,22 @@
 					<input type="file" id="pic2" accept="image/*">
 				</td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 					Work Package ID:
 				</td>
 				<td>
 					<input type="text" name="wp_id" id="wp_id">
 				</td>
-			</tr>
-			<tr>
+			</tr> -->
+			<!-- <tr>
 				<td>
 					Work Package Name:
 				</td>
 				<td>
 					<input type="text" name="wp_name" id="wp_name">
 				</td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td>
 					Work Package Description:
@@ -135,20 +164,28 @@
 					<input type="text" name="wp_desc" id="wp_desc">
 				</td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 					Work Package Date:
 				</td>
 				<td>
 					<input type="text" name="wp_date" id="wp_date">
 				</td>
-			</tr>
-			<tr>
+			</tr> -->
+			<!-- <tr>
 				<td>
 					Project:
 				</td>
 				<td>
 					<input type="text" name="project" id="project">
+				</td>
+			</tr> -->
+			<tr>
+				<td>
+					Loc:
+				</td>
+				<td>
+					<input type="text" name="loc" id="loc">
 				</td>
 			</tr>
 		</table>
