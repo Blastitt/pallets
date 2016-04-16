@@ -13,12 +13,11 @@ body{
 	padding:20px;
 }
 
-#wrapper input{
+#wrapper input[type=text]{
 	border:none;
 	border-bottom:1px solid #87764e;
 	width:400px;
 	color:#074077;
-	
 }
 
 #wrapper table{
