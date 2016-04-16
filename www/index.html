@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
 
         <style>
-                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
                 @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
         </style>
 
@@ -33,7 +33,6 @@
     </head>
 
     <body>
-
         <div data-role="page" id="home">
 
             <div data-role="header" class="ui-body-b">
@@ -50,7 +49,7 @@
                 <a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a>
             </div>
         </div>
-        
+
         <div data-role="page" id="search">
             <div data-role="header" class="ui-body-b">
                 <a href="#home" data-icon="back">Back</a>
@@ -58,13 +57,32 @@
             </div>
 
             <div data-role="content">
-    <h2>search</h2>
+                
+                <label for="srchPalName">Pallet Name:</label>
+                <input type="text" name="name" id="srchPalName" value="">
+                
+                <label for="srchPalDesc">Pallet Description:</label>
+                <input type="text" name="name" id="srchPalDesc" value="">
+                
+                <button>Search</button>
+                <br>
+
+                <div data-role="collapsible">
+                    <h1>Test Results List (2 hits)</h1>
+
+                    <ul id="resultsList">
+                        <li><a href="#info" class="ui-btn ui-icon-carat-r ui-btn-icon-right">Pallet 1</a>
+                        </li>
+                        <li><a href="#info" class="ui-btn ui-icon-carat-r ui-btn-icon-right">Pallet 2</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div data-role="footer" class="ui-body-b" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#search" data-icon="search">Search</a>
+                        <li><a href="#search" data-icon="search" data-theme="a">Search</a>
                         </li>
                         <li><a href="#qrScan" data-icon="camera">Scan QR</a>
                         </li>
@@ -75,8 +93,57 @@
                 </div>
             </div>
         </div>
-        
-        
+
+        <div data-role="page" id="qrScan">
+            <div data-role="header" class="ui-body-b">
+                <a href="#home" data-icon="back">Back</a>
+                <h1>Search</h1>
+            </div>
+
+            <div data-role="content">
+                <h1>QR Scan</h1>
+            </div>
+
+            <div data-role="footer" class="ui-body-b" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a>
+                        </li>
+                        <li><a href="#qrScan" data-icon="camera" data-theme="a">Scan QR</a>
+                        </li>
+                        <li><a href="#nfcScan" data-icon="tag">Scan NFC</a>
+                        </li>
+                        <!--                        <li><a href="#search" data-icon="search">Search</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="nfcScan">
+            <div data-role="header" class="ui-body-b">
+                <a href="#home" data-icon="back">Back</a>
+                <h1>Search</h1>
+            </div>
+
+            <div data-role="content">
+                <h1>NFC Scanner</h1>
+            </div>
+
+            <div data-role="footer" class="ui-body-b" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a>
+                        </li>
+                        <li><a href="#qrScan" data-icon="camera">Scan QR</a>
+                        </li>
+                        <li><a href="#nfcScan" data-icon="tag" data-theme="a">Scan NFC</a>
+                        </li>
+                        <!--                        <li><a href="#search" data-icon="search">Search</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </body>
 
 </html>
