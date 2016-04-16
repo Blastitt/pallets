@@ -2,25 +2,50 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<style>
-	table td{
+	
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"
+	integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+	crossorigin="anonymous"></script>
+	
+	<script>
+	function validatePallet(){
+		return true;
+	}
+	
+	function submitPallet(){
+		if(!validatePallet()) return;
+		$.post( "test.php", { 
+			pal_name: $("pal_name").val(), 
+			pal_id: $("pal_id").val(),
+			pal_desc: $("pal_desc").val(),
+			long: $("long").val(),
+			lat: $("lat").val(),
+			pic1: "?",
+			pic2: "?",
+			pack_id: $("wp_id").val(),
+			pack_name: $("wp_name").val(),
+			pack_desc: $("wp_desc").val(),
+			pack_date: $("wp_date").val(),
+			project: $("project").val()}, 
+			function( data ) {
+  			alert( "Data Posted: " + data );
+		});
 		
 	}
-	</style>
+	</script>
 </head>
 <body>
 	
 	<div id="wrapper">
 		<h1>Pallet Finder</h1>
 		<p>create pallet</p>
-	
 		<table>
 			<tr>
 				<td>
 					Pallet Name:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="pallet_name" id="pallet_name">
 				</td>
 			</tr>
 			<tr>
@@ -28,7 +53,7 @@
 					Pallet ID:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="pallet_id" id="pallet_id">
 				</td>
 			</tr>
 			<tr>
@@ -36,7 +61,7 @@
 					Pallet Description:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="pallet_desc" id="pallet_desc">
 				</td>
 			</tr>
 			<tr>
@@ -44,7 +69,7 @@
 					Longitude:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="long" id="long">
 				</td>
 			</tr>
 			<tr>
@@ -52,7 +77,7 @@
 					Latitude:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="lat" id="lat">
 				</td>
 			</tr>
 			<tr>
@@ -76,7 +101,7 @@
 					Work Package ID:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="wp_id" id="wp_id">
 				</td>
 			</tr>
 			<tr>
@@ -84,7 +109,7 @@
 					Work Package Name:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="wp_name" id="wp_name">
 				</td>
 			</tr>
 			<tr>
@@ -92,7 +117,7 @@
 					Work Package Description:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="wp_desc" id="wp_desc">
 				</td>
 			</tr>
 			<tr>
@@ -100,7 +125,7 @@
 					Work Package Date:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="wp_date" id="wp_date">
 				</td>
 			</tr>
 			<tr>
@@ -108,12 +133,12 @@
 					Project:
 				</td>
 				<td>
-					<input type="text">
+					<input type="text" name="project" id="project">
 				</td>
 			</tr>
 		</table>
 		
-		<span class="ugly-hii-yellow clickable">Submit</span>
+		<input type="submit" value="Submit" onclick="submitPallet()">
 	</div>
 	
 	
