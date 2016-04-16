@@ -10,6 +10,8 @@
 	
 	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.32.min.js"></script>
 	<script src="js/upload.js"></script>
+	<script src="js/global.js"></script>
+	
 	
 	<script>
 	
@@ -19,7 +21,7 @@
 	
 	function submitPallet(){
 		if(!validatePallet()) return;
-		$.post( "api/store.php", { 
+		$.post( GLOBAL_API_ENDPOINT + "/store.php", { 
 			pal_name: $("pal_name").val(), 
 			pal_id: $("pal_id").val(),
 			pal_desc: $("pal_desc").val(),

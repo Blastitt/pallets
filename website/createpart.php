@@ -3,13 +3,14 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+	<script src="js/global.js"></script>
+	
 	
 	<script>
 	function validatePart(){
 		var partName = document.getElementById("part_name").value;
 		if(partName.trim().length == 0)
 			return false;
-		
 	}
 	</script>
 </head>

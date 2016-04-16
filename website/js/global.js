@@ -1,0 +1,1 @@
+GLOBAL_API_ENDPOINT = "http://10.20.64.126/api/find.cgi?"

@@ -7,6 +7,8 @@
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"
 	integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
 	crossorigin="anonymous"></script>
+	<script src="js/global.js"></script>
+	
 	
 	<style>
 	#no-results{
@@ -23,15 +25,16 @@
 		return true;
 	}
 	
-	function findPallet(){
+	function find(){
 		if(!validatePallet()) return;
-		$.get( "api/find.php", { 
-			pal_name: $("pal_name").val(), 
-			pal_id: $("pal_id").val()}, 
-			function( data ) {
-  			alert( "Data Posted: " + data );
-		});
-		
+		function api_findPallet(name, id){
+			$.get( GLOBAL_API_ENDPOINT + "/find.php", { 
+				pal_name: $("pal_name").val(), 
+				pal_id: $("pal_id").val()}, 
+				function( data ) {
+		 			alert( "Data Posted: " + data );
+			});
+		}
 	}
 	
 	function addResult(itemName, itemID, itemDesc){

@@ -3,6 +3,8 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+	<script src="js/global.js"></script>
+	
 	
 </head>
 <body>
