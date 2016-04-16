@@ -91,6 +91,8 @@
                         </li>
                         <li><a href="#nfcScan" data-icon="tag">Scan NFC</a>
                         </li>
+                        <li><a href="#info" data-icon="info">Info</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -119,6 +121,8 @@
                         </li>
                         <li><a href="#nfcScan" data-icon="tag">Scan NFC</a>
                         </li>
+                        <li><a href="#info" data-icon="info">Info</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -143,11 +147,58 @@
                         </li>
                         <li><a href="#nfcScan" data-icon="tag" data-theme="a">Scan NFC</a>
                         </li>
+                        <li><a href="#info" data-icon="info">Info</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+         <div data-role="page" id="info">
+            <div data-role="header" class="ui-body-b">
+                <a href="#home" data-icon="back">Back</a>
+                <h1>Search</h1>
+            </div>
+
+            <div data-role="content">
+                <h1>NFC Scanner</h1>
+            </div>
+
+            <div data-role="footer" class="ui-body-b" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a>
+                        </li>
+                        <li><a href="#qrScan" data-icon="camera">Scan QR</a>
+                        </li>
+                        <li><a href="#nfcScan" data-icon="tag" data-theme="a">Scan NFC</a>
+                        </li>
+                        <li><a href="#info" data-icon="info">Info</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
 
+    <div data-role="page" id="display">
+    <div data-role="header">
+        <a target="_blank" href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1>Display</h1>
+    </div>
+
+        <div data-role="main" class="ui-content">
+            <table data-role="table" data-mode="column" id="allTable" class="ui-responsive table-stroke">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+        </table>
+        </div>
+    </div>
 <!--        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
 <!--        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 <!--        <script type="text/javascript" src="cordova.js"></script>-->
