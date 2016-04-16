@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "a3239f99-efcd-4a6e-aa3e-884e0fee7b3a",
-      "lastModifiedDate": 1460811704883,
+      "lastModifiedDate": 1460813200787,
       "creationDate": 1460811698920
     },
     "XDK-app-designer": "true",
@@ -69,6 +69,28 @@
         "name": "Splashscreen",
         "description": "Cordova Splashscreen Plugin",
         "checksum": "452a4659"
+      },
+      {
+        "id": "cordova-plugin-camera",
+        "name": "Camera",
+        "version": "2.1.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-camera",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-camera",
+        "selectedState": "Included",
+        "checksum": "b5eb9803",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+          ]
+        },
+        "description": "Cordova Camera Plugin",
+        "data": {},
+        "dependedBy": []
       }
     ],
     "buildConfigurations": {
@@ -125,7 +147,7 @@
         "appName_": "PalletTracker",
         "appID_": "xdk.intel.blank.ad.template",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
@@ -139,7 +161,8 @@
             "itms:*",
             "itms-apps:*"
           ],
-          "navigation": []
+          "navigation": [],
+          "properties": {}
         },
         "icons_": [],
         "splashes_": [],
@@ -165,12 +188,13 @@
         "appName_": "PalletTracker",
         "appID_": "xdk.intel.blank.ad.template",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
           "intents": [],
-          "navigation": []
+          "navigation": [],
+          "properties": {}
         },
         "icons_": [],
         "splashes_": [],
