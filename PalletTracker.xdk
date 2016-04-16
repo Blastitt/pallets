@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "a3239f99-efcd-4a6e-aa3e-884e0fee7b3a",
-      "lastModifiedDate": 1460813200787,
+      "lastModifiedDate": 1460823996737,
       "creationDate": 1460811698920
     },
     "XDK-app-designer": "true",
@@ -68,7 +68,8 @@
         "gitref": "",
         "name": "Splashscreen",
         "description": "Cordova Splashscreen Plugin",
-        "checksum": "452a4659"
+        "checksum": "452a4659",
+        "cordovaVersion": ">=3.1.0"
       },
       {
         "id": "cordova-plugin-camera",
@@ -89,6 +90,67 @@
           ]
         },
         "description": "Cordova Camera Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-dialogs",
+        "name": "Notification",
+        "version": "1.2.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-dialogs",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-dialogs",
+        "selectedState": "Included",
+        "checksum": "1af74557",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {},
+        "description": "Cordova Notification Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-inappbrowser",
+        "name": "InAppBrowser",
+        "version": "1.3.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-inappbrowser",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-inappbrowser",
+        "selectedState": "Included",
+        "checksum": "20f7ee20",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.1.0",
+        "permissions": {},
+        "description": "Cordova InAppBrowser Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "phonegap-plugin-barcodescanner",
+        "name": "BarcodeScanner",
+        "version": "4.1.0",
+        "originType": "cordova.io",
+        "origin": "phonegap-plugin-barcodescanner",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/phonegap-plugin-barcodescanner",
+        "selectedState": "Included",
+        "checksum": "980170d7",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {
+          "android:name": [
+            "android.permission.CAMERA",
+            "android.permission.FLASHLIGHT"
+          ]
+        },
+        "description": "You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application.",
         "data": {},
         "dependedBy": []
       }

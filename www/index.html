@@ -58,13 +58,16 @@
 
             <div data-role="content">
                 
+                <label for="srchPalID">Pallet ID:</label>
+                <input type="text" name="name" id="srchPalID" value="">
+                
                 <label for="srchPalName">Pallet Name:</label>
                 <input type="text" name="name" id="srchPalName" value="">
                 
                 <label for="srchPalDesc">Pallet Description:</label>
                 <input type="text" name="name" id="srchPalDesc" value="">
                 
-                <button>Search</button>
+                <button id="btnSrchByText">Search</button>
                 <br>
 
                 <div data-role="collapsible">
@@ -88,7 +91,6 @@
                         </li>
                         <li><a href="#nfcScan" data-icon="tag">Scan NFC</a>
                         </li>
-                        <!--                        <li><a href="#search" data-icon="search">Search</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -101,7 +103,11 @@
             </div>
 
             <div data-role="content">
-                <h1>QR Scan</h1>
+              <p>
+            <a target="_blank" href="javascript:scan();" style="text-decoration: none"><button>Scan</button></a>
+            <a target="_blank" href="#display" style="text-decoration: none"><button>Display Scanned Data</button></a>
+        </p>
+
             </div>
 
             <div data-role="footer" class="ui-body-b" data-position="fixed">
@@ -113,7 +119,6 @@
                         </li>
                         <li><a href="#nfcScan" data-icon="tag">Scan NFC</a>
                         </li>
-                        <!--                        <li><a href="#search" data-icon="search">Search</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -138,12 +143,16 @@
                         </li>
                         <li><a href="#nfcScan" data-icon="tag" data-theme="a">Scan NFC</a>
                         </li>
-                        <!--                        <li><a href="#search" data-icon="search">Search</a></li>-->
                     </ul>
                 </div>
             </div>
         </div>
 
+<!--        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<!--        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+<!--        <script type="text/javascript" src="cordova.js"></script>-->
+        <script src="js/palletApp.js"></script>
     </body>
 
+        
 </html>
