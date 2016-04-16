@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 <head>
-	
+	<link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
 <body>
 	<h1>Pallet Finder</h1>
