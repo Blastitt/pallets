@@ -8,13 +8,14 @@
 	crossorigin="anonymous"></script>
 	
 	<script>
+	
 	function validatePallet(){
 		return true;
 	}
 	
 	function submitPallet(){
 		if(!validatePallet()) return;
-		$.post( "test.php", { 
+		$.post( "api/store.php", { 
 			pal_name: $("pal_name").val(), 
 			pal_id: $("pal_id").val(),
 			pal_desc: $("pal_desc").val(),
@@ -139,6 +140,7 @@
 		</table>
 		
 		<input type="submit" value="Submit" onclick="submitPallet()">
+		
 	</div>
 	
 	
