@@ -15,7 +15,7 @@
 	
 	<div id="wrapper">
 		<h1>Pallet Finder</h1>
-		<p>create part</p>
+		<h2>create part</h2>
 	
 		<form action ="api/createpart.php" onsubmit="return validatePart()">
 		<table>
@@ -29,7 +29,8 @@
 			</tr>
 		</table>
 		
-		<span class="ugly-hii-yellow clickable">Submit</span>
+		<input type="submit" value="Submit">
+		
 	</form>
 	</div>
 	

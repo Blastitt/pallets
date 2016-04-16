@@ -4,6 +4,10 @@ body{
 	font-family:arial;
 }
 
+h2{
+	border-bottom:1px solid #ae9d73;
+}
+
 #wrapper{
 	width:800px;
 	background-color:#fff;
@@ -15,14 +19,22 @@ body{
 
 #wrapper input[type=text]{
 	border:none;
-	border-bottom:1px solid #87764e;
+		border-bottom:1px solid #074077;
 	width:400px;
 	color:#074077;
+	background-color:transparent;
 }
 
 #wrapper table{
 	color:#074077;
+	border-radius: 25px;
+	border:1px solid #074077;
+	background-color:#bddcfb;
+	padding:20px;
+	margin-bottom:15px;
 }
+
+
 
 .ugly-hii-yellow{
 	color:#ae9d73;
