@@ -2,12 +2,16 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"
 	integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
 	crossorigin="anonymous"></script>
 	
 	<style>
+	#no-results{
+		display:none;
+	}
 	#results{
 		display:none;
 	}
@@ -48,7 +52,7 @@
 <body>
 	
 	<div id="wrapper">
-		<h1>Pallet Finder</h1>
+		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
 		<p>find pallet</p>
 		<table>
 			<tr>
@@ -71,7 +75,7 @@
 		
 		<input type="submit" value="Submit" onclick="findPallet()">
 		
-		<div class="bad-red">No Results</div>
+		<div class="bad-red" id="no-results">No Results</div>
 		
 		<div id="results">
 			<!-- RESULTS GO HERE -->
@@ -91,6 +95,9 @@
 		</div>
 		
 	</div>
+	
+	<div id="footer">iNNovate Hackathon 2016</div>
+	
 	
 	
 </body>

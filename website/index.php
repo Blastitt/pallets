@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	<style>
 	
 		
@@ -23,7 +24,7 @@
 	
 	
 	<div id="wrapper">
-		<h1>Pallet Finder</h1>
+		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
 		<p>Find items and pallets around the shipyard</p>
 	
 		<!--<img src="images/app.png" /> -->
@@ -35,6 +36,7 @@
 		<!--<input type="text" style="width:100%;font-size:20px"> -->
 	</div>
 	
+	<div id="footer">iNNovate Hackathon 2016</div>
 	
 	
 	

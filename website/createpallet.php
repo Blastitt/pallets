@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"
 	integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
@@ -49,8 +50,8 @@
 <body>
 	
 	<div id="wrapper">
-		<h1>Pallet Finder</h1>
-		<p>create pallet</p>
+		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
+		<h2>create pallet</h2>
 		<table>
 			<tr>
 				<td>
@@ -94,7 +95,7 @@
 			</tr>
 			<tr>
 				<td>
-					Pcture 1:
+					Picture 1:
 				</td>
 				<td>
 					<input type="file" id="pic1">
@@ -154,6 +155,8 @@
 		
 		
 	</div>
+	
+	<div id="footer">iNNovate Hackathon 2016</div>
 	
 	
 </body>

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+	
 	<script>
 	function validatePart(){
 		var partName = document.getElementById("part_name").value;
@@ -14,7 +16,7 @@
 <body>
 	
 	<div id="wrapper">
-		<h1>Pallet Finder</h1>
+		<h1><img src="images/pallet_100.png" id="pallet_logo"/>Pallet Finder</h1>
 		<h2>create part</h2>
 	
 		<form action ="api/createpart.php" onsubmit="return validatePart()">
@@ -33,6 +35,8 @@
 		
 	</form>
 	</div>
+	
+	<div id="footer">iNNovate Hackathon 2016</div>
 	
 	
 </body>
