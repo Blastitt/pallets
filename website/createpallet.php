@@ -86,7 +86,7 @@
 					Pcture 1:
 				</td>
 				<td>
-					<input type="text">
+					<input type="file">
 				</td>
 			</tr>
 			<tr>
@@ -94,7 +94,7 @@
 					Picture 2:
 				</td>
 				<td>
-					<input type="text">
+					<input type="file">
 				</td>
 			</tr>
 			<tr>
@@ -140,6 +140,7 @@
 		</table>
 		
 		<input type="submit" value="Submit" onclick="submitPallet()">
+		
 		
 	</div>
 	

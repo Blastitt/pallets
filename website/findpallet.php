@@ -7,21 +7,41 @@
 	integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
 	crossorigin="anonymous"></script>
 	
+	<style>
+	#results{
+		display:none;
+	}
+	</style>
+	
 	<script>
 	
 	function validatePallet(){
 		return true;
 	}
 	
-	function submitPallet(){
+	function findPallet(){
 		if(!validatePallet()) return;
 		$.get( "api/find.php", { 
 			pal_name: $("pal_name").val(), 
-			pal_id: $("pal_id").val(),, 
+			pal_id: $("pal_id").val()}, 
 			function( data ) {
   			alert( "Data Posted: " + data );
 		});
 		
+	}
+	
+	function addResult(itemName, itemID, itemDesc){
+		$("#results").show();
+		$("#results").find('tbody')
+    		.append($('<tr>')
+        		.append($('<td>')
+					
+            		/*.append($('<img>')
+                		.attr('src', 'img.png')
+                		.text('Image cell')*/
+            	)
+        	)
+    	);
 	}
 	</script>
 </head>
@@ -50,6 +70,25 @@
 		</table>
 		
 		<input type="submit" value="Submit" onclick="findPallet()">
+		
+		<div class="bad-red">No Results</div>
+		
+		<div id="results">
+			<!-- RESULTS GO HERE -->
+			<table>
+				<tr>
+					<th>
+						Pallet Name
+					</th>
+					<th>
+						Pallet ID
+					</th>
+					<th>
+						Pallet Desc
+					</th>
+				</tr>
+			</table>
+		</div>
 		
 	</div>
 	

@@ -49,3 +49,7 @@ a {
 	cursor:pointer;
 	text-decoration:underline;
 }
+
+.bad-red{
+	color:red;
+}
