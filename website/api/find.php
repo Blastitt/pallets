@@ -1,5 +1,11 @@
 <?php
 
+// REMOVE ABOVE BEFORE PRODUCTION
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+// REMOVE ABOVE BEFORE PRODUCTION
+
+
 $pal_name = $_GET["pal_name"];
 $pal_id = $_GET["pal_id"];
 
@@ -29,12 +35,17 @@ $resultArray = array();
 
 $count = 1;
 
-while($item = $result->fetch_assoc()){
-	array_push($resultArray, ('item' . $count) => array(
-		 'item_name' => $item["pal_name"], 'item_id' => $item["pal_id"], 'item_desc' => $item["pal_desc"]
-		));
+if($result->num_rows>0){
+	while($item = $result->fetch_assoc()){
+		array_push($resultArray, ('item' . $count) => array(
+			 'item_name' => $item["pal_name"], 'item_id' => $item["pal_id"], 'item_desc' => $item["pal_desc"]
+			));
 
-	count++;
+		count++;
+	}
+}
+else{
+	echo "No results.";
 }
 
 $result->close();
