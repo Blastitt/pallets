@@ -7,17 +7,19 @@
 	
 	<script>
 	function upload(){
-		var file = document.getElementById('myFile');
+		var file = document.getElementById('myFile').files[0];
 		var filename = "testFile";
-		uploadFile(file, fileName);
+		uploadFile(file, filename);
 	}
 	</script>
 	</head>
 
 	
 	<body>
+		<form>
 		<input type="file" id="myFile">
-		<span onlick="upload"> upload</span>
+		<span onclick="upload()"> upload</span>
+	</form>
 	</body>
 
 </html>
